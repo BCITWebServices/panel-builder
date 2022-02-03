@@ -200,6 +200,7 @@ class MetaBox {
 			switch ( $user_color_scheme_name ) {
 				case 'coffee':
 				case 'ectoplasm':
+				case 'modern':
 				case 'ocean':
 				case 'sunrise':
 					$primary_color_index = 2;
