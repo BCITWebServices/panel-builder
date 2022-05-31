@@ -185,7 +185,6 @@ class Post_List extends Field {
 		setup_postdata( $post );
 		$data['title']     = get_the_title();
 		$data['content']   = get_the_content();
-		$data['excerpt']   = get_the_excerpt();
 		$data['image']     = get_post_thumbnail_id();
 		$data['link']      = [
 			'url'    => get_permalink(),
@@ -194,6 +193,7 @@ class Post_List extends Field {
 		];
 		$data['post_type'] = $post->post_type;
 		$data['post_id']   = $post->ID;
+		$data['excerpt']   = get_the_excerpt();
 		wp_reset_postdata();
 
 		return apply_filters( 'panel_post_id_to_array', $data, $post_id, $_post );
