@@ -110,7 +110,12 @@ class Panel implements \JsonSerializable {
 		return $this->children;
 	}
 
-	public function jsonSerialize() {
+	/**
+	 * Specify data which should be serialized to JSON.
+	 *
+	 * @return array Always return an array.
+	 */
+	public function jsonSerialize(): array {
 		return [
 			'type'   => (string) $this->type,
 			'depth'  => (int) $this->depth,

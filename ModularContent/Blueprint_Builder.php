@@ -97,7 +97,12 @@ class Blueprint_Builder implements \JsonSerializable {
 		return $children;
 	}
 
-	public function jsonSerialize() {
+	/**
+	 * Specify data which should be serialized to JSON.
+	 *
+	 * @return array Always return an array.
+	 */
+	public function jsonSerialize(): array {
 		$type = $this->get_current_post_type();
 		$blueprint = $this->get_blueprint( $type );
 		foreach ( $blueprint[ 'types' ] as $index => $panel ) {
