@@ -88,6 +88,7 @@ class PanelCollection implements \JsonSerializable {
 	 *
 	 * @return array Always return an array.
 	 */
+	#[\ReturnTypeWillChange]
 	public function jsonSerialize(): array {
 		return [
 			'panels' => $this->panels,
