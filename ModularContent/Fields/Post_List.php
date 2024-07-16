@@ -677,7 +677,7 @@ class Post_List extends Field {
 				$labels = array_column( $options, 'label' );
 				array_multisort( $labels, SORT_ASC, $options );
 
-				$panels_terms[ $taxonomy_name ] = $options;
+				$panels_terms[$taxonomy_name] = is_array($options) ? $options : [];
 			}
 
 			// Force transients to use the database
